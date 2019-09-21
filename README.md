@@ -1,6 +1,6 @@
 # Work in progress
 
-This is fork that adds Docker compatibility to the original project template.
+This fork adds Docker compatibility to the original project template.
 In order to do so, the `package.json` file needed a tweak. Also a `Dockerfile` was added.
 
 Below, there's the text of the original readme
