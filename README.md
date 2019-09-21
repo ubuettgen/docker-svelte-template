@@ -3,6 +3,8 @@
 This is fork that adds Docker compatibility to the original project template.
 In order to do so, the `package.json` file needed a tweak. Also a `Dockerfile` was added.
 
+Below, there's the text the original readme
+
 ---
 
 *Psst — looking for a shareable component template? Go here --> [sveltejs/component-template](https://github.com/sveltejs/component-template)*
