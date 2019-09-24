@@ -1,5 +1,5 @@
 #!/bin/sh
-#start your new hugo&svelte project witn this
+#start your new svelte project witn this
 
 cd /src/sveltedev
 npm install --force
