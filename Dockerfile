@@ -1,20 +1,18 @@
 # Use Alpine Linux as our base image so that we minimize the overall size our final container, 
-# and minimize the surface area of packages that could be out of date.
+#and minimize the surface area of packages that could be out of date.
 FROM node:alpine
 
 # COPY ./run.sh /run.sh 
 COPY ./init.sh /init.sh 
 
-RUN apk update git asciidoctor libc6-compat libstdc++ \
+RUN apk add --update git asciidoctor libc6-compat libstdc++ \
     && apk upgrade \
     && apk add --no-cache ca-certificates \
-    && apk add --no-cache nano #\
-#     && chmod 0777 /run.sh \
-  	&& chmod 0777 /init.sh
-RUN mkdir -p /src/sveltedev \
-    && cd /src \
+    && apk add --no-cache nano \
+ 	&& chmod 0777 /init.sh \
+    && cd / \
     && npx degit --force mihaimiculescu/svelte-template sveltedev \
-    && cd /src/sveltedev \
+    && cd /sveltedev \
     && npm install --force
 
 VOLUME /src
