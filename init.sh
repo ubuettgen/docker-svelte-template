@@ -3,7 +3,7 @@
 
 cd /src/sveltedev
 npm install --force
-copy public src /src/svelte
+cp public src /src/svelte
 npm run dev
 
 #npm install creates this:
