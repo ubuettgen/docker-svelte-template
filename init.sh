@@ -1,25 +1,7 @@
 #!/bin/sh
-#start your new svelte project witn this
+#start your new Svelte project witn this
 
-cd /src/sveltedev
-npm install --force
-cp public src /src/svelte
+cd /sveltedev
+cp -R public src /src/svelte
+rm -R public src
 npm run dev
-
-#npm install creates this:
-#	node_modules
-#package-lock.json
-#package.json
-#	public
-#rollup.config.js
-#	src
-#and in the public folder:
-#favicon.png
-#global.css
-#index.html
-# npm run dev creates some extra files in public folder:
-# global.css
-# bundle.css
-# bundle.css.map
-# bundle.js
-# bundle.js.map
