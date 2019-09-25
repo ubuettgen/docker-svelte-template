@@ -5,7 +5,6 @@ In order to do so, some tweakings were applied to `package.json` and `rollup.con
 ### No Nodejs install required on the host machine
 Just make sure you have Docker installed and up and running.
 Tested so far on Windows10 with Linux containers and on (K)ubuntu 18 LTS.
-
 ---
 ---
 ## Usage
