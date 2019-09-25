@@ -1,7 +1,7 @@
 # Work in progress Svelte within Docker container
 
 This fork adds Docker compatibility to the original project template for [Svelte](https://svelte.dev) apps, that lives at https://github.com/sveltejs/template.
-In order to do so, some tweaking was applied to `package.json` and `rollup.config.js` files. Also a `Dockerfile` was added.
+In order to do so, some tweakings were applied to `package.json` and `rollup.config.js` files. Also a `Dockerfile` was added.
 
 ---
 
@@ -27,5 +27,5 @@ docker run -ti -v $pwd/:/src -p 5000:5000 -p 35729:35729 <name-of-image> sh
 ```
 #### Linux
 ```
-docker run -ti -v $pwd/:/src -p 5000:5000 -p 35729:35729 <name-of-image> sh
+docker run -ti -v $(pwd)/:/src -p 5000:5000 -p 35729:35729 <name-of-image> sh
 ```
