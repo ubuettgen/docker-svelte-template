@@ -34,3 +34,4 @@ docker run -ti --name <container_name) -v $(pwd)/:/src -p 5000:5000 -p 35729:357
 ```
 /./init.sh
 ```
+At this point you should be able to see the familiar purple "Hello world" at http://localhost:5000/
