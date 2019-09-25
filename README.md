@@ -17,7 +17,7 @@ To create a new project based on this template:
 cd your/path/to/your/project-folder
 docker build -t <name-of-image> .
 ```
-Wait until it's built then type:
+4. Wait until it's built then type:
 #### Windows:
 ```
 docker run -ti  --name <container_name) -v ${PWD}:/src -p 5000:5000 -p 35729:35729 <name-of-image> sh
@@ -29,4 +29,8 @@ docker run -ti --name <container_name) -v $pwd/:/src -p 5000:5000 -p 35729:35729
 #### Linux
 ```
 docker run -ti --name <container_name) -v $(pwd)/:/src -p 5000:5000 -p 35729:35729 <name-of-image> sh
+```
+5. Once inside the container, type:
+```
+/./init.sh
 ```
