@@ -17,8 +17,7 @@ To create a new project based on this template:
 docker build -t <name-of-image> .
 ```
 Wait until it's built then type:
-
-####Windows:
+#### Windows:
 ```
 docker run -ti -v ${PWD}:/src -p 5000:5000 -p 35729:35729 <name-of-image> sh
 ```
