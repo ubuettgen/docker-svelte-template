@@ -1,80 +1,31 @@
-# Work in progress
+# Work in progress Svelte within Docker container
 
-This fork adds Docker compatibility to the original project template.
-In order to do so, the `package.json` file needed a tweak. Also a `Dockerfile` was added.
-
-Below, there's the text of the original readme
+This fork adds Docker compatibility to the original project template for [Svelte](https://svelte.dev) apps, that lives at https://github.com/sveltejs/template.
+In order to do so, some tweaking was applied to `package.json` and `rollup.config.js` files. Also a `Dockerfile` was added.
 
 ---
 
----
+## No Nodejs install required on the host machine
 
-*Psst — looking for a shareable component template? Go here --> [sveltejs/component-template](https://github.com/sveltejs/component-template)*
-
----
-
-# svelte app
-
-This is a project template for [Svelte](https://svelte.dev) apps. It lives at https://github.com/sveltejs/template.
-
-To create a new project based on this template using [degit](https://github.com/Rich-Harris/degit):
-
-```bash
-npx degit sveltejs/template svelte-app
-cd svelte-app
+Just make sure you have Docker installed and up and running.
+Tested so far on Windows10 with Linux containers and on (K)ubuntu 18 LTS.
+To create a new project based on this template:
+1. Create a folder for your project on the local machine.
+2. Download the files `Dockerfile` and `init.sh` from this repository to that folder. 
+3. Open terminal (Windows users, please use PowerShell only) and type:
+```cd your/path/to/your/project-folder
+docker build -t <name-of-image> .
 ```
-
-*Note that you will need to have [Node.js](https://nodejs.org) installed.*
-
-
-## Get started
-
-Install the dependencies...
-
-```bash
-cd svelte-app
-npm install
+Wait until it's built then type:
+####Windows:
 ```
-
-...then start [Rollup](https://rollupjs.org):
-
-```bash
-npm run dev
+docker run -ti -v ${PWD}:/src -p 5000:5000 -p 35729:35729 <name-of-image> sh
 ```
-
-Navigate to [localhost:5000](http://localhost:5000). You should see your app running. Edit a component file in `src`, save it, and reload the page to see your changes.
-
-
-## Deploying to the web
-
-### With [now](https://zeit.co/now)
-
-Install `now` if you haven't already:
-
-```bash
-npm install -g now
+if you get any error, use this:
 ```
-
-Then, from within your project folder:
-
-```bash
-cd public
-now
+docker run -ti -v $pwd/:/src -p 5000:5000 -p 35729:35729 <name-of-image> sh
 ```
-
-As an alternative, use the [Now desktop client](https://zeit.co/download) and simply drag the unzipped project folder to the taskbar icon.
-
-### With [surge](https://surge.sh/)
-
-Install `surge` if you haven't already:
-
-```bash
-npm install -g surge
+#### Linux
 ```
-
-Then, from within your project folder:
-
-```bash
-npm run build
-surge public
+docker run -ti -v $pwd/:/src -p 5000:5000 -p 35729:35729 <name-of-image> sh
 ```
