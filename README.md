@@ -8,7 +8,8 @@ Tested so far on Windows10 with Linux containers and on (K)ubuntu Bionic LTS.
 
 ---
 ## Usage
-#### Linux users: please prefix all `docker` commands with `sudo` if your distro requires it, [or follow these steps](https://docs.docker.com/install/linux/linux-postinstall/).
+##### Note to Linux users: please prefix all `docker` commands with `sudo` if your distro requires it, [or follow these steps](https://docs.docker.com/install/linux/linux-postinstall/).
+
 To create a new project based on this template:
 1. Create a folder for your project on the local machine.
 2. Download the files `Dockerfile` and `init.sh` from this repository to that folder. 
