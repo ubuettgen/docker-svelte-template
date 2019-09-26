@@ -8,7 +8,7 @@ Tested so far on Windows10 with Linux containers and on (K)ubuntu Bionic LTS.
 
 ---
 ## Usage
-##### Note to Linux users: please prefix all `docker` commands with `sudo` if your distro requires it, [or follow these steps](https://docs.docker.com/install/linux/linux-postinstall/).
+###### Note to Linux users: please prefix all `docker` commands with `sudo` if your distro requires it, [or follow these steps](https://docs.docker.com/install/linux/linux-postinstall/).
 
 To create a new project based on this template:
 1. Create a folder for your project on the local machine.
@@ -25,11 +25,11 @@ docker run -ti  --name <container_name> -v ${PWD}:/src -p 5000:5000 -p 35729:357
 ```
 if you get any error, use this:
 ```
-docker run -ti --name <container_name) -v $pwd/:/src -p 5000:5000 -p 35729:35729 <name-of-image> sh
+docker run -ti --name <container_name> -v $pwd/:/src -p 5000:5000 -p 35729:35729 <name-of-image> sh>
 ```
 #### Linux
 ```
-docker run -ti --name <container_name) -v $(pwd)/:/src -p 5000:5000 -p 35729:35729 <name-of-image> sh
+docker run -ti --name <container_name> -v $(pwd)/:/src -p 5000:5000 -p 35729:35729 <name-of-image> sh
 ```
 5. Once inside the container, type:
 ```
