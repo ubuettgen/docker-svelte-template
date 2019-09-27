@@ -7,12 +7,12 @@ import { terser } from 'rollup-plugin-terser';
 const production = !process.env.ROLLUP_WATCH;
 
 export default {
-	input: '../src/svelte/src/main.js',
+	input: '/src/svelte/src/main.js',
 	output: {
 		sourcemap: true,
 		format: 'iife',
 		name: 'app',
-		file: '../src/svelte/public/bundle.js'
+		file: '/src/svelte/public/bundle.js'
 	},
 	plugins: [
 		svelte({
@@ -21,7 +21,7 @@ export default {
 			// we'll extract any component CSS out into
 			// a separate file — better for performance
 			css: css => {
-				css.write('../src/svelte/public/bundle.css');
+				css.write('/src/svelte/public/bundle.css');
 			}
 		}),
 
@@ -38,7 +38,7 @@ export default {
 
 		// Watch the `public` directory and refresh the
 		// browser on changes when not in production
-		!production && livereload('../src/svelte/public'),
+		!production && livereload('/src/svelte/public'),
 
 		// If we're building for production (npm run build
 		// instead of npm run dev), minify
