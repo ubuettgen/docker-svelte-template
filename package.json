@@ -19,6 +19,6 @@
     "autobuild": "rollup -c -w",
     "dev": "run-p start:dev autobuild",
     "start": "sirv ../src/svelte/public --single",
-    "start:dev": "sirv ../src/svelte/public --single --dev --host 0.0.0.0 --port 5000 -m 5"
+    "start:dev": "sirv ../src/svelte/public --single --dev --host 0.0.0.0 --port 5000"
   }
 }
