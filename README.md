@@ -53,7 +53,7 @@ Go ahead and edit the files in the `src`folder and watch the changes in your bro
 8. To resume your session type
 ```
 docker start <container_name>
-docker exec -ti <container_name>
+docker exec -ti <container_name> sh
 ```
 once inside the container, type
 ```
