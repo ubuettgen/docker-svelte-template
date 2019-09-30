@@ -4,7 +4,7 @@ Develop [Svelte](https://svelte.dev) apps using Docker containers!
 #### No Nodejs install required on the host machine
 Just make sure you have Docker installed and up and running.
 #### No `node_modules` folder in your project
-It just sits into your container. All you deal with on your local machine are the source and output folders.
+It just sits into your container. On your local machine, all you deal with are the source and output folders.
 #### Multiple projects, one image
 Each new project just requires a new project folder, a new container that you initalize and you're good to go!
 
@@ -43,10 +43,13 @@ docker run -ti --name <container_name> -v $(pwd)/:/src -p 5000:5000 -p 35729:357
 /./init.sh
 ```
 At this point you should be able to see the familiar purple "Hello world" at http://localhost:5000/
-Leave the terminal window open
+Leave the terminal window open.
+
 6. Please note the `svelte` subfolder of your project folder. You will find in it another 2 folders: `src` and `public`
 Go ahead and edit the files in the `src`folder and watch the changes in your browser!
-7, To stop your session: press CTRL+C and ENTER in your terminal window. Then type `exit`
+
+7. To stop your session: press CTRL+C and ENTER in your terminal window. Then type `exit`
+
 8. To resume your session type
 ```
 docker start <container_name>
@@ -57,5 +60,5 @@ once inside the container, type
 npm run dev
 ``` 
 and that's it.
-
+---
 ### Good luck with your projects!
