@@ -1,8 +1,9 @@
 # Svelte within Docker container
+Develop [Svelte](https://svelte.dev) apps using Docker containers!
 
 #### No Nodejs install required on the host machine
 Just make sure you have Docker installed and up and running.
-#### No node_modules folder in your project codebase
+#### No node_modules folder in your project
 It just sits into your container and all you deal with on your local machine are the source and output folders.
 #### Multiple projects from the same image
 Each new project just requires a new project folder,a new container that you initalize and you're good to go!
