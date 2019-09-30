@@ -60,5 +60,6 @@ once inside the container, type
 npm run dev
 ``` 
 and that's it.
+
 ---
-### Good luck with your projects!
+### Good luck with your Svelte projects!
