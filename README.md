@@ -21,7 +21,7 @@ To create a new project based on this template:
 2. Download the files `Dockerfile` and `init.sh` from this repository to that folder. 
 3. Open terminal (Windows users, please use PowerShell only) and type:
 ```
-cd your/path/to/your/project-folder
+cd path/to/your/project-folder
 docker build -t <name-of-image> .
 ```
 4. Wait until it's built then type:
