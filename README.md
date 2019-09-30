@@ -10,6 +10,7 @@ Each new project just requires a new project folder,a new container that you ini
 
 This fork adds Docker compatibility to the original project template for [Svelte](https://svelte.dev) apps, that lives at https://github.com/sveltejs/template.
 In order to do so, some tweakings were applied to `package.json` and `rollup.config.js` files. Also a `Dockerfile` was added.
+
 Tested so far on Windows 10 with Linux containers and on (K)ubuntu Bionic LTS.
 
 ---
