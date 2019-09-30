@@ -50,7 +50,7 @@ Go ahead and edit the files in the `src`folder and watch the changes in your bro
 
 7. To stop your session: press CTRL+C and ENTER in your terminal window. Then type `exit`
 
-8. To resume your session type
+8. To resume your session, just type:
 ```
 docker start <container_name>
 docker exec -ti <container_name> sh
