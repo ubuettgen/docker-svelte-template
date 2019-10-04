@@ -45,6 +45,12 @@ export default {
 		production && terser()
 	],
 	watch: {
-		clearScreen: false
+		clearScreen: false,
+		chokidar:{
+			paths: '../src/svelte/src',
+			usePolling: true,
+			interval: 1000, //increase value for larger projects
+			binaryInterval: 3000, //increase value for larger projects
+		}
 	}
 };
