@@ -15,7 +15,7 @@ RUN apk add --update git asciidoctor libc6-compat libstdc++ \
 
 VOLUME /src
 
-WORKDIR /src/svelte
+WORKDIR /sveltedev
 CMD ["/init.sh"]
 
 EXPOSE 5000 35729 3572
