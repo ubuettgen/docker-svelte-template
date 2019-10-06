@@ -2,7 +2,9 @@
 #start your new Svelte project witn this
 
 cd /src
-mkdir svelte
+if [ ! -d svelte ]; then mkdir svelte ;fi
+cd svelte
+if [ ! -d public ]; then cp -R /sveltedev/public . ;fi
+if [ ! -d src ]; then cp -R /sveltedev/src . ;fi
 cd /sveltedev
-cp -R public src /src/svelte
 npm run dev
