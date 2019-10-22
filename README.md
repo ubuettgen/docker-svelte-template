@@ -48,7 +48,11 @@ Leave the terminal window open.
 6. Please note the `svelte` subfolder of your project folder. You will find in it another 2 folders: `src` and `public`
 Go ahead and edit the files in the `src`folder and watch the changes in your browser!
 
-7. To stop your session: press CTRL+C twice and ENTER in your terminal window. Then type `exit`
+7. To stop your session: press CTRL+C twice and ENTER in your terminal window. Then type `exit`. 
+Once out of the container, type
+```
+docker stop <container_name>
+```
 
 8. To resume your session, just type:
 ```
