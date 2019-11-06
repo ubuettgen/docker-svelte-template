@@ -1,5 +1,6 @@
 {
   "name": "svelte-app",
+  "svelte": "/src/svelte/src/index.js",
   "version": "1.0.0",
   "devDependencies": {
     "rollup": "^1.12.0",
