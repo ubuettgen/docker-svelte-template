@@ -2,6 +2,7 @@ import svelte from 'rollup-plugin-svelte';
 import resolve from 'rollup-plugin-node-resolve';
 import commonjs from 'rollup-plugin-commonjs';
 import livereload from 'rollup-plugin-livereload';
+import postcss from 'rollup-plugin-postcss';
 import { terser } from 'rollup-plugin-terser';
 import rollup_start_dev from './rollup_start_dev';
 
@@ -25,6 +26,7 @@ export default {
 				css.write('/src/svelte/public/bundle.css');
 			}
 		}),
+		postcss(),
 
 		// If you have external dependencies installed from
 		// npm, you'll most likely need these plugins. In
