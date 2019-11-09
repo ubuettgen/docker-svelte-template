@@ -8,12 +8,12 @@ import rollup_start_dev from './rollup_start_dev';
 const production = !process.env.ROLLUP_WATCH;
 
 export default {
-	input: '/src/svelte/src/main.js',
+	input: 'src/main.js',
 	output: {
 		sourcemap: true,
 		format: 'iife',
 		name: 'app',
-		file: '/src/svelte/public/bundle.js'
+		file: 'public/bundle.js'
 	},
 	plugins: [
 		svelte({
@@ -22,7 +22,7 @@ export default {
 			// we'll extract any component CSS out into
 			// a separate file — better for performance
 			css: css => {
-				css.write('/src/svelte/public/bundle.css');
+				css.write('public/bundle.css');
 			}
 		}),
 
@@ -43,7 +43,7 @@ export default {
 
 		// Watch the `public` directory and refresh the
 		// browser on changes when not in production
-		!production && livereload('/src/svelte/public'),
+		!production && livereload('public'),
 
 		// If we're building for production (npm run build
 		// instead of npm run dev), minify
@@ -52,7 +52,7 @@ export default {
 	watch: {
 		clearScreen: false,
 		chokidar:{
-			paths: '../src/svelte/src',
+			paths: 'src',
 			usePolling: true,
 			interval: 1000, //increase value for larger projects
 			binaryInterval: 3000, //increase value for larger projects
