@@ -9,11 +9,12 @@ RUN apk add --update git asciidoctor libc6-compat libstdc++ \
     && apk add --no-cache nano \
  	&& chmod 0777 /init.sh \
     && cd / \
-    && npx degit --force mihaimiculescu/docker-svelte-template sveltedev \
+    && npx degit --force mihaimiculescu/docker-svelte-template#dev sveltedev \
     && cd /sveltedev \
     && npm install --force
 
-VOLUME /src
+VOLUME /sveltedev/src
+VOLUME /sveltedev/public
 
 WORKDIR /sveltedev
 CMD ["/init.sh"]
