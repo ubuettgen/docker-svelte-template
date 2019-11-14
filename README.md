@@ -17,35 +17,52 @@ Tested so far on Windows 10 with Linux containers and on (K)ubuntu Bionic LTS.
 ## Usage
 ###### Note to Linux users: please prefix all `docker` commands with `sudo` if your distro requires it, [or follow these steps](https://docs.docker.com/install/linux/linux-postinstall/).
 
-To create a new project based on this template:
-1. Create a folder for your project on the local machine.
-2. Download the files `Dockerfile` and `init.sh` from this repository to that folder. 
-3. Open terminal (Windows users, please use PowerShell only) and type:
+To create a new project based on this template, open terminal (Windows users, please use PowerShell only) and `cd` into the folder where you keep all your projects. Then do the following steps:
+1. Clone the repo on your local machine
+  either
+  1a) via git: 
+``` 
+git clone --single-branch --branch master https://github.com/mihaimiculescu/docker-svelte-template.git 
 ```
-cd path/to/your/project-folder
+  or
+  1b) via zip:
+[Click here to download the zip file](https://github.com/mihaimiculescu/docker-svelte-template/archive/master.zip)
+and then put it in the folder where you keep all your projects. Then extract it there.
+2. Step 1 creates a folder called `docker-svelte-template`.  
+Go ahead and rename it to something meaningful for you. Then cd into it:
+```
+cd <folder_name>
+```
+3. Build your image:
+either create it from Dockerfile
+3a)
+```
 docker build -t <name-of-image> .
 ```
-4. Wait until it's built then type:
+or download the image from docker hub:
+```
+docker pull mihaimiculescu/svelte
+```
+
+3b)
+
+4. Create and start your container:
 #### Windows:
 ```
-docker run -ti  --name <container_name> -v ${PWD}:/src -p 5000:5000 -p 35729:35729 -p 3572:3572 --init <name-of-image> sh
-```
-if you get any error, use this:
-```
-docker run -ti --name <container_name> -v $pwd/:/src -p 5000:5000 -p 35729:35729 -p 3572:3572 --init <name-of-image> sh
+docker run -ti --name <container_name> -p 5000:5000 -p 35729:35729 -p 3572:3572 -v ${PWD}/src:/sveltedev/src -v ${PWD}/public:/sveltedev/public --init <name-of-image> sh
 ```
 #### Linux
 ```
-docker run -ti --name <container_name> -v $(pwd)/:/src -p 5000:5000 -p 35729:35729 -p 3572:3572 --init <name-of-image> sh
+docker run -ti --name <container_name> -p 5000:5000 -p 35729:35729 -p 3572:3572 -v $(pwd)/src:/sveltedev/src -v $(pwd)/public:/sveltedev/public --init <name-of-image> sh
 ```
 5. Once inside the container, type:
 ```
-/./init.sh
+npm run dev
 ```
 At this point you should be able to see the familiar purple "Hello world" at http://localhost:5000/
 Leave the terminal window open.
 
-6. Please note the `svelte` subfolder of your project folder. You will find in it another 2 folders: `src` and `public`
+6. Please note the 2 folders: `src` and `public`within your project folder. 
 Go ahead and edit the files in the `src`folder and watch the changes in your browser!
 
 7. To stop your session: press CTRL+C twice and ENTER in your terminal window. Then type `exit`. 
