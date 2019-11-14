@@ -38,17 +38,16 @@ Go ahead and rename it to something meaningful for you. Then cd into it:
 cd <folder_name>
 ```
 3. Build your image:
-either create it from Dockerfile
-3a)
+3a) either create it from Dockerfile
 ```
 docker build -t <name-of-image> .
 ```
-or download the image from docker hub:
+
+or 
+3b) download the image from docker hub:
 ```
 docker pull mihaimiculescu/svelte
 ```
-
-3b)
 
 4. Create and start your container:
 #### Windows:
