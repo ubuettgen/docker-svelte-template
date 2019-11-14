@@ -19,12 +19,16 @@ Tested so far on Windows 10 with Linux containers and on (K)ubuntu Bionic LTS.
 
 To create a new project based on this template, open terminal (Windows users, please use PowerShell only) and `cd` into the folder where you keep all your projects. Then do the following steps:
 1. Clone the repo on your local machine
+
   either
+  
   1a) via git: 
 ``` 
 git clone --single-branch --branch master https://github.com/mihaimiculescu/docker-svelte-template.git 
 ```
+  
   or
+  
   1b) via zip:
 [Click here to download the zip file](https://github.com/mihaimiculescu/docker-svelte-template/archive/master.zip)
 and then put it in the folder where you keep all your projects. Then extract it there.
