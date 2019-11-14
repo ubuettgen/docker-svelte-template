@@ -68,6 +68,7 @@ docker run -ti --name <container_name> -p 5000:5000 -p 35729:35729 -p 3572:3572 
 ### 5. ###
 Once inside the container, type:
 ```
+npm install
 npm run dev
 ```
 At this point you should be able to see the familiar purple "Hello world" at http://localhost:5000/
@@ -83,7 +84,6 @@ Once out of the container, type
 ```
 docker stop <container_name>
 ```
-
 ### 8. ### 
 To resume your session, just type:
 ```
