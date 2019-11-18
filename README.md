@@ -1,5 +1,5 @@
-# Svelte within Docker container
-Develop [Svelte](https://svelte.dev) apps using Docker containers!
+# Svelte with Bulma = Svelma within Docker container
+Develop [Svelte](https://svelte.dev) with [Svelma components](https://c0bra.github.io/svelma/) apps using Docker containers!
 
 #### No Nodejs install required on the host machine
 Just make sure you have Docker installed and up and running.
@@ -8,7 +8,7 @@ It just sits into your container. On your local machine, all you deal with are t
 #### Multiple projects, one image
 Each new project just requires a new project folder, a new container that you initalize and you're good to go!
 
-This fork adds Docker compatibility to the original project template for [Svelte](https://svelte.dev) apps, that lives at https://github.com/sveltejs/template.
+This fork adds Docker compatibility to the original project template for [Svelte](https://svelte.dev) apps, that lives at https://github.com/sveltejs/template. It also comes with [Svelma components](https://github.com/c0bra/svelma) baked into the image.
 In order to do so, some tweakings were applied to `package.json` and `rollup.config.js` files. Also a `Dockerfile` was added.
 
 Tested so far on Windows 10 with Linux containers and on (K)ubuntu Bionic LTS.
@@ -17,44 +17,64 @@ Tested so far on Windows 10 with Linux containers and on (K)ubuntu Bionic LTS.
 ## Usage
 ###### Note to Linux users: please prefix all `docker` commands with `sudo` if your distro requires it, [or follow these steps](https://docs.docker.com/install/linux/linux-postinstall/).
 
-To create a new project based on this template:
-1. Create a folder for your project on the local machine.
-2. Download the files `Dockerfile` and `init.sh` from this repository to that folder. 
-3. Open terminal (Windows users, please use PowerShell only) and type:
+To create a new project based on this template, open terminal (Windows users, please use PowerShell only) and `cd` into the folder where you keep all your projects. Then do the following steps:
+### 1. ###
+Clone the repo on your local machine
+
+  either
+  
+  1a) via git: 
+``` 
+git clone --single-branch --branch withsvelma https://github.com/mihaimiculescu/docker-svelte-template.git 
 ```
-cd path/to/your/project-folder
+  
+  or
+  
+  1b) via zip:
+[Click here to download the zip file](https://github.com/mihaimiculescu/docker-svelte-template/archive/withsvelma.zip)
+and then put it in the folder where you keep all your projects. Then extract it there.
+### 2. ###
+Step 1 creates a folder called `docker-svelte-template`.  
+Go ahead and rename it to something meaningful for you. Then cd into it:
+```
+cd <folder_name>
+```
+### 3. ###
+Build your image:
+
+```
 docker build -t <name-of-image> .
 ```
-4. Wait until it's built then type:
+### 4. ###
+Create and start your container:
 #### Windows:
 ```
-docker run -ti  --name <container_name> -v ${PWD}:/src -p 5000:5000 -p 35729:35729 -p 3572:3572 --init <name-of-image> sh
-```
-if you get any error, use this:
-```
-docker run -ti --name <container_name> -v $pwd/:/src -p 5000:5000 -p 35729:35729 -p 3572:3572 --init <name-of-image> sh
+docker run -ti --name <container_name> -p 5000:5000 -p 35729:35729 -p 3572:3572 -v ${PWD}/src:/sveltedev/src -v ${PWD}/public:/sveltedev/public --init <name-of-image> sh
 ```
 #### Linux
 ```
-docker run -ti --name <container_name> -v $(pwd)/:/src -p 5000:5000 -p 35729:35729 -p 3572:3572 --init <name-of-image> sh
+docker run -ti --name <container_name> -p 5000:5000 -p 35729:35729 -p 3572:3572 -v $(pwd)/src:/sveltedev/src -v $(pwd)/public:/sveltedev/public --init <name-of-image> sh
 ```
-5. Once inside the container, type:
+### 5. ###
+Once inside the container, type:
 ```
-/./init.sh
+npm run dev
 ```
-At this point you should be able to see the familiar purple "Hello world" at http://localhost:5000/
+At this point you should be able to see the familiar "Hello world" at http://localhost:5000/
 Leave the terminal window open.
 
-6. Please note the `svelte` subfolder of your project folder. You will find in it another 2 folders: `src` and `public`
+### 6. ###
+Please notice the 2 folders: `src` and `public`within your project folder. 
 Go ahead and edit the files in the `src`folder and watch the changes in your browser!
 
-7. To stop your session: press CTRL+C twice and ENTER in your terminal window. Then type `exit`. 
+### 7. ###
+To stop your session: press CTRL+C twice and ENTER in your terminal window. Then type `exit`. 
 Once out of the container, type
 ```
 docker stop <container_name>
 ```
-
-8. To resume your session, just type:
+### 8. ### 
+To resume your session, just type:
 ```
 docker start <container_name>
 docker exec -ti <container_name> sh
