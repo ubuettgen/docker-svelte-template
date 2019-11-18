@@ -1,4 +1,4 @@
-# Svelte + Bulma = Svelma within Docker container
+# Svelte + Bulma = Svelma, within Docker container
 Develop [Svelte](https://svelte.dev) with [Svelma components](https://c0bra.github.io/svelma/) apps using Docker containers!
 
 #### No Nodejs install required on the host machine
