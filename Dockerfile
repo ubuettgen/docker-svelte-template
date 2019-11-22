@@ -18,6 +18,6 @@ EXPOSE 5000 35729 3572
 RUN cd /sveltedev \
     && npm install \
     && sed -i -e '/"name": "svelma",/a\    "svelte": "src/index.js",' /sveltedev/node_modules/svelma/package.json \
-    && sed -i -e 's/^0.7.5/^0.8.0/g'  /sveltedev/node_modules/svelma/package.json \
+    && sed -i -e 's/0.7.5/0.8.0/g'  /sveltedev/node_modules/svelma/package.json \
     && rm package-lock.json \
     && npm install
