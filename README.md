@@ -34,8 +34,9 @@ git clone --single-branch --branch withsvelma https://github.com/mihaimiculescu/
 [Click here to download the zip file](https://github.com/mihaimiculescu/docker-svelte-template/archive/withsvelma.zip)
 and then put it in the folder where you keep all your projects. Then extract it there.
 ### 2. ###
-Step 1 creates a folder called `docker-svelte-template-withsvelma`.  
-Go ahead and rename it to something meaningful for you. Then cd into it:
+Step 1 via git creates a folder called `docker-svelte-template`.  
+Step 1 via zip creates a folder called `docker-svelte-template-withsvelma`.  
+Either way, go ahead and rename it to something meaningful for you. Then cd into it:
 ```
 cd <folder_name>
 ```
