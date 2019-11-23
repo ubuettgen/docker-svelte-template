@@ -46,6 +46,10 @@ Build your image:
 ```
 docker build -t <name-of-image> .
 ```
+Alternatively, you can use the pre-built image from docker hub
+```
+docker pull mihaimiculescu/svelte:withsvelma
+```
 ### 4. ###
 Create and start your container:
 #### Windows:
