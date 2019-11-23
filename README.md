@@ -56,6 +56,8 @@ docker run -ti --name <container_name> -p 5000:5000 -p 35729:35729 -p 3572:3572 
 ```
 docker run -ti --name <container_name> -p 5000:5000 -p 35729:35729 -p 3572:3572 -v $(pwd)/src:/sveltedev/src -v $(pwd)/public:/sveltedev/public --init <name-of-image> sh
 ```
+where `<container_name>` is anything of your choice.
+
 ### 5. ###
 Once inside the container, type:
 ```
