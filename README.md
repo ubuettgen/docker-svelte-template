@@ -1,3 +1,5 @@
+Psst! Looking for the blank template? [Click here!](https://github.com/mihaimiculescu/docker-svelte-template/tree/master)
+
 # Svelte + Bulma = Svelma, within Docker container
 Develop [Svelte](https://svelte.dev) with [Svelma components](https://c0bra.github.io/svelma/) apps using Docker containers!
 
