@@ -1,3 +1,5 @@
+Psst! Looking for a template with Svelma included? [Click here!]{https://github.com/mihaimiculescu/docker-svelte-template/tree/withsvelma}
+
 # Svelte within Docker container
 Develop [Svelte](https://svelte.dev) apps using Docker containers!
 
