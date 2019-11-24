@@ -15,12 +15,6 @@
 
 </script>
 
-<style>
-	h1 {
-		color: purple;
-	}
-</style>
-
 <h1>Hello {name}!</h1>
 <h2>Start building your app from here. </h2><br>
 <!-- Main container -->
