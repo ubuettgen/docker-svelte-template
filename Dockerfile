@@ -6,7 +6,9 @@ RUN apk add --update git asciidoctor libc6-compat libstdc++ \
     && apk add --no-cache ca-certificates \
     && apk add --no-cache nano \
     && cd / \
-    && npx degit --force mihaimiculescu/docker-svelte-template sveltedev 
+    && npx degit --force ubuettgen/docker-svelte-template sveltedev 
+    
+RUN npm install
     
 VOLUME /sveltedev/src
 VOLUME /sveltedev/public
